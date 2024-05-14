@@ -10,6 +10,8 @@ export default defineConfig({
 			logo: {
 				src: './src/assets/logo_nimforue.png',
 			},
+			site: 'https://xkonti.github.io',
+			base: 'nimforue-docs',
 			social: {
 				github: 'https://github.com/jmgomez/NimForUE',
 				discord: 'https://discord.gg/smD8vZxzHh',
