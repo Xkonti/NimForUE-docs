@@ -16,7 +16,7 @@ uClass AMyNimActor of AActor:
       log "Hello from Nim"
 ```
 
-The `uClass` allows for using [`uprop`](/concepts/uproperty) and [`ufuncs`](/concepts/ufunction) macros to define properties and functions of the class.
+The `uClass` allows for using [`uprop`](../uproperty) and [`ufuncs`](../ufunction) macros to define properties and functions of the class.
 
 ## The `default` keyword
 
