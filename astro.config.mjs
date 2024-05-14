@@ -13,12 +13,12 @@ export default defineConfig({
 				src: './src/assets/logo_nimforue.png',
 			},
 			social: {
-				github: 'https://github.com/jmgomez/NimForUE',
+				github: 'https://github.com/Xkonti/NimForUE-docs',
 				discord: 'https://discord.gg/smD8vZxzHh',
 				twitter: 'https://twitter.com/_jmgomez_',
 			},
 			editLink: {
-				baseUrl: 'https://github.com/jmgomez/NimForUE_docs/edit/main/',
+				baseUrl: 'https://github.com/Xkonti/NimForUE-docs/edit/main/',
 			},
 			sidebar: [
 				{
