@@ -3,6 +3,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://xkonti.github.io',
+	base: '/NimForUE-docs',
 	integrations: [
 		starlight({
 			title: 'NimForUE documentation',
@@ -10,8 +12,6 @@ export default defineConfig({
 			logo: {
 				src: './src/assets/logo_nimforue.png',
 			},
-			site: 'https://xkonti.github.io',
-			base: 'nimforue-docs',
 			social: {
 				github: 'https://github.com/jmgomez/NimForUE',
 				discord: 'https://discord.gg/smD8vZxzHh',
