@@ -12,7 +12,7 @@ dependencies:
     specifier: ^4.3.5
     version: 4.8.2
   sharp:
-    specifier: ^0.32.5
+    specifier: ^0.32.6
     version: 0.32.6
 
 packages:
