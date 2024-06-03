@@ -3,11 +3,12 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://xkonti.github.io',
-	base: '/NimForUE-docs',
+	site: import.meta.env['SITE_URL'] ?? undefined,
 	integrations: [
 		starlight({
-			title: 'NimForUE documentation',
+			title: process.env['DEPLOYMENT_ENV'] === 'prod'
+				? 'NimForUE'
+				: `NimForUE - ${process.env['DEPLOYMENT_ENV'] ?? 'dev'}`,
 			description: 'NimForUE is a Nim language wrapper for Unreal Engine 5',
 			logo: {
 				src: './src/assets/logo_nimforue.png',
