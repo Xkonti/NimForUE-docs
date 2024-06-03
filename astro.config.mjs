@@ -24,10 +24,16 @@ export default defineConfig({
 				{
 					label: 'Getting started',
 					items: [
-						{ label: 'Introduction', link: '/start/introduction/' },
-						{ label: 'Installation', link: '/start/install/' },
-						{ label: 'Usage', link: '/start/usage/' },
+						{ label: 'Introduction', link: '/start/introduction' },
+						{ label: 'Installation', link: '/start/install' },
+						{ label: 'Usage', link: '/start/usage' },
 					],
+				},
+				{
+					label: 'Configuration',
+					items: [
+						{ label: 'Config files', link: '/configuration/config_files' },
+					]
 				},
 				{
 					label: 'Concepts',
