@@ -6,9 +6,9 @@ export default defineConfig({
 	site: import.meta.env['SITE_URL'] ?? undefined,
 	integrations: [
 		starlight({
-			title: import.meta.env['DEPLOYMENT_ENV'] === 'prod'
+			title: process.env['DEPLOYMENT_ENV'] === 'prod'
 				? 'NimForUE'
-				: `NimForUE - ${import.meta.env['DEPLOYMENT_ENV'] ?? 'dev'}`,
+				: `NimForUE - ${process.env['DEPLOYMENT_ENV'] ?? 'dev'}`,
 			description: 'NimForUE is a Nim language wrapper for Unreal Engine 5',
 			logo: {
 				src: './src/assets/logo_nimforue.png',
