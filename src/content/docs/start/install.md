@@ -32,6 +32,8 @@ Make sure you have Unreal Engine 5.2 installed and you are using Nim devel (`cho
 
 ## Adding NimForUE to an existing project
 
-1. Make sure you have Nim installed. The required version is `devel` as NimForUE uses some features that are not yet in the stable version.
+Consider watching a detailed video tutorial on how to add NimForUE to an existing project [here](https://youtu.be/sT8-Oz7k-VU).
+
+1. Make sure you have Nim installed. The required version is `devel` as NimForUE uses some features that are not yet in the stable version. Avoid using choosenim.
 1. Clone the repo inside `YourGame/Plugins`
 1. Run `nimble nuesetup` from `YourGame/Plugins/NimForUE`
