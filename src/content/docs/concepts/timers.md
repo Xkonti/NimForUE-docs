@@ -11,7 +11,7 @@ uClass ABoom of AActor:
 
   ufuncs(BlueprintCallable, Category = "Boom methods"):
     proc start() =
-      self.timerHandle = setTimer(self, "onTimer", 1.0, true, true)
+      self.timerHandle = self.setTimer("onTimer", 1.0, true, true)
 
   ufuncs:
     proc onTimer() =
