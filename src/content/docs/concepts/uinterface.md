@@ -3,33 +3,23 @@ title: UINTERFACE type
 description: Define UINTERFACE type in Nim.
 ---
 
-Does this macro exist?
+```nim
+# Just decorate the ufuncs to be implemented with BlueprintImplementableEvent
+uClass UMyInterface of UInterface:
+  ufuncs(BlueprintImplementableEvent):
+    proc myFunc() 
 
-```cpp
-// Declaration
-UINTERFACE(MinimalAPI)
-class UMyInterface : public UInterface
-{
-    GENERATED_BODY()
-}
-
-// Definition
-class IMyInterface
-{
-    GENERATED_IINTERFACE_BODY()
-
-    virtual void MyFunction() = 0;
-};
-
-// Usage
-class AMyClass : public AActor, public IMyInterface
-{
-    GENERATED_BODY()
-
-public:
-    virtual void MyFunction() override
-    {
-        // Implementation here
-    }
-};
+# And then implement it
+uClass UMyUClass of UObject implements UMyInterface
+   ufuncs:
+     proc myFunc() = 
+       log "whatever"
 ```
+
+Then you can do
+
+```nim
+let myInterface: UMyInterface = newUObject[UMyClass]()
+```
+
+**Notice**: `implements` will generate a converter for you. static checking will be added in the future.
