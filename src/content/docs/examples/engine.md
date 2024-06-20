@@ -4,7 +4,7 @@ description: Example code
 ---
 
 ```nim
-include ../unreal/prelude
+include unrealprelude
 import ../unreal/bindings/[engine]
 # import ../unreal/bindings/exported/[slate, slatecore]
 # import ../unreal/bindings/exported/nimforue
