@@ -9,7 +9,7 @@ The whole Cpp ThirdPersonTemplate in Nim would be like this:
 ```nim
 uClass ANimCharacter of ACharacter:
   (config=Game)
-  uprops(EditAnywhere, BlueprintReadOnly, DefaultComponent, Category = Camera):
+  uprops(EditAnywhere, BlueprintReadOnly, DefaultComponent, Category = Camera): # DefaultComponent ensures the component is created by the constructor
     cameraBoom : USpringArmComponentPtr 
   uprops(EditAnywhere, BlueprintReadOnly, DefaultComponent, Attach=(cameraBoom, SpringEndpoint), Category = Camera):
     followCamera : UCameraComponentPtr
@@ -31,8 +31,8 @@ uClass ANimCharacter of ACharacter:
     cameraBoom.busePawnControlRotation = true
     followCamera.bUsePawnControlRotation = true
   
-  override: #Notice here we are overriding a native cpp virtual func. You can call `super` self.super(playerInputComponent) or super(self, playerInputComponent)
-    proc setupPlayerInputComponent(playerInputComponent : UInputComponentPtr) = 
+  ufuncs:
+    proc setupPlayerInputComponent(playerInputComponent : UInputComponentPtr) =  #Notice here we are overriding a native cpp virtual func. You can call `super` self.super(playerInputComponent) or super(self, playerInputComponent)
       let pc = ueCast[APlayerController](self.getController())
       if pc.isNotNil():
         let inputComponent = ueCast[UEnhancedInputComponent](playerInputComponent)
@@ -43,8 +43,6 @@ uClass ANimCharacter of ACharacter:
         inputComponent.bindAction(self.moveAction, ETriggerEvent.Triggered, self, n"move")
         inputComponent.bindAction(self.lookAction, ETriggerEvent.Triggered, self, n"look")
 
-  
-  ufuncs:
     proc move(value: FInputActionValue) = 
       let 
         movementVector = value.axis2D()
@@ -65,9 +63,8 @@ uClass ANimGameMode of AGameModeBase:
     self.defaultPawnClass = classFinder.class
 ```
 
-
-
 This code can be found at `src/examples/actorexample`. There are more examples inside that folder. You can do `import examples/example` in from Game.nim (see the NimTemplate) to play with it.
+
 ```nim
 #Nim UClasses can derive from the same classes that blueprints can derive from.
 

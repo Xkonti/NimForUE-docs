@@ -4,7 +4,7 @@ description: Example code
 ---
 
 ```nim
-include ../unreal/prelude
+include unrealprelude
 
 #Nim UClasses can derive from the same classes that blueprints can derive from.
 

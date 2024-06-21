@@ -3,8 +3,6 @@ title: UPROPERTY type
 description: Ways to mark fields as UPROPERTY.
 ---
 
-
-
 ## The `uprops` macro
 
 The `uprops` macro is used to mark fields in Nim as `UPROPERTY` in Unreal Engine.
@@ -25,4 +23,5 @@ uClass AMyActor of AActor:
     intVale : int32
     someDoubleValue : float64
     predValue : FString = "Hello"
+    startPos: FVector = randomPos()
 ```

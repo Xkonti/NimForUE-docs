@@ -4,11 +4,9 @@ description: Example code
 ---
 
 ```nim
-include ../unreal/prelude
+include unrealprelude
 import std/[strformat, options, sugar, json, osproc, strutils, jsonutils,  sequtils, os]
 import ../codegen/uemeta
-
-
 
 proc vector4_Zero*(): FVector4 {.exportcpp: "$1_", noInit.} =
   type
@@ -22,8 +20,6 @@ proc vector4_Zero*(): FVector4 {.exportcpp: "$1_", noInit.} =
       fnName)
   self.processEvent(fn, param.addr)
   return param.returnValue
-
-
 
 # proc makeColor() : FColor = 
 #   FColor(r:100)
