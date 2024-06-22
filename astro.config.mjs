@@ -28,6 +28,7 @@ export default defineConfig({
 						{ label: 'Introduction', link: '/start/introduction' },
 						{ label: 'Installation', link: '/start/install' },
 						{ label: 'Usage', link: '/start/usage' },
+						{ label: 'Debugging', link: '/start/debug' },
 					],
 				},
 				{
