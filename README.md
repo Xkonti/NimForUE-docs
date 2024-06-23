@@ -6,6 +6,15 @@ These docs are work in progress. If you have experience with [NimForUE](https://
 
 # Developing the docs with Starlight
 
+This project has [GitHub codespaces](https://github.com/features/codespaces) and [devcontainers](https://containers.dev/) already setup, providing a development environment for the docs. This way you can use the same environment as the docs are built in - directly from the browser or VSCode. 
+
+## Manual project setup
+
+1. Have [pnpm](https://pnpm.io/) installed
+2. Clone the repository
+3. Install dependencies: `pnpm install`
+4. Start the development server: `pnpm dev`
+
 ## 🚀 Project Structure
 
 Inside of your Astro + Starlight project, you'll see the following folders and files:
@@ -36,12 +45,12 @@ All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `pnpm install`             | Installs dependencies                            |
+| `pnpm run dev`             | Starts local dev server at `localhost:4321`      |
+| `pnpm run build`           | Build your production site to `./dist/`          |
+| `pnpm run preview`         | Preview your build locally, before deploying     |
+| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `pnpm run astro -- --help` | Get help using the Astro CLI                     |
 
 ## 👀 Want to learn more?
 
