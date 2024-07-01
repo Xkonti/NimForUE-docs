@@ -56,8 +56,3 @@ uClass UEnemyDetector of UActorComponent:
 ```
 
 ![What it looks like in Blueprints editor](blueprint-event-01.jpg)
-
-## Usage in Blueprints
-With this setup, in Blueprints you can:
-- Bind the `onEnemyEnter` event
-- Call the `triggerEnemyEnterEvent` function to fire the event
